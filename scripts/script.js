@@ -1,3 +1,4 @@
+// #region Botones
 document.querySelector('#exportarCSV').addEventListener('click', (e) =>{
     sendData(e, document.querySelector('#formExportarCSV'));
 });
@@ -79,3 +80,14 @@ function transformArrayToString(array) {
 
     return string.slice(0, -2);
 }
+
+
+// #region Checkboxes
+document.addEventListener("DOMContentLoaded", function () {
+    const checkAll = document.getElementById("checkAll");
+    const checkboxes = document.querySelectorAll('table tbody input[type="checkbox"]');
+
+    checkAll.addEventListener("change", function () {
+        checkboxes.forEach(cb => cb.checked = checkAll.checked);
+    });
+});

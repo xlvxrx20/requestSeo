@@ -14,23 +14,29 @@
                         <th>Busqueda</th>
                         <th>¿Intención de compra?</th>
                     </tr>
-                </thead>
-                <?php
-                    for ($i = 0; $i < count($_SESSION["recommendedResults"]); $i++) {
-                        $recomendedResult = $_SESSION["recommendedResults"][$i];
-                ?>
                     <tr>
-                        <td><input type="checkbox" checked></td>
-                        <td class="tableText"><?php echo ($i+1) . ". " . $recomendedResult[0]; ?></td>
-                        <td>
-                            <?php if ($recomendedResult[1] == true) { ?>
-                                <img src="./img/tick.png" alt="Con intención de compra">
-                            <?php } else { ?>
-                                <img src="./img/x.png" alt="Sin intención de compra">
-                            <?php } ?>
-                        </td>
+                        <th><input type="checkbox" id="checkAll" checked></th>
+                        <th colspan="2">Marcar/Desmarcar todos</th>
                     </tr>
-                <?php } ?>
+                </thead>
+                <tbody>
+                    <?php
+                        for ($i = 0; $i < count($_SESSION["recommendedResults"]); $i++) {
+                            $recomendedResult = $_SESSION["recommendedResults"][$i];
+                    ?>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td class="tableText"><?php echo ($i+1) . ". " . $recomendedResult[0]; ?></td>
+                            <td>
+                                <?php if ($recomendedResult[1] == true) { ?>
+                                    <img src="./img/tick.png" alt="Con intención de compra">
+                                <?php } else { ?>
+                                    <img src="./img/x.png" alt="Sin intención de compra">
+                                <?php } ?>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
             </table>
             
             <div id="botonesBusqueda">

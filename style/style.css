@@ -91,6 +91,11 @@ table th {
     background-color: color-mix(in srgb, var(--amarillo-oscuro), wheat 5%);
 }
 
+table thead tr:last-child th {
+    border-bottom: 2px solid grey;
+    background-color: color-mix(in srgb, var(--amarillo-oscuro), white 16%);
+}
+
 tr:nth-child(odd) {
     background-color: var(--amarillo-normal-1);
 }
@@ -103,7 +108,7 @@ tr:hover {
     background-color: var(--amarillo-normal-3);
 }
 
-table tr td input[type="checkbox"] {
+table tr input[type="checkbox"] {
     appearance: none;
     width: 18px;
     height: 18px;
@@ -115,7 +120,7 @@ table tr td input[type="checkbox"] {
     cursor: pointer;
 }
 
-table tr td input[type="checkbox"]:checked {
+table tr input[type="checkbox"]:checked {
     background-color: lightgreen;
 }
 
