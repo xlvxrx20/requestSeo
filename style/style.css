@@ -1,0 +1,223 @@
+:root {
+    --amarillo-claro: #feffd7;
+    --amarillo-normal-1: #fdffbe;
+    --amarillo-normal-2: #fcffa8;
+    --amarillo-normal-3: #fbff8f;
+    --amarillo-oscuro: #fff082;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, main   {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--amarillo-oscuro), var(--amarillo-claro));
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h1 strong {
+    font-weight: bold;
+}
+
+h2 {
+    margin: 10px;
+    margin-top: 24px;
+}
+
+p {
+    margin-top: 8px;
+}
+
+form {
+    display: flex;
+    margin: 12px;
+    padding: 8px;
+    background-color: var(--amarillo-normal-1);
+    border: 3px solid wheat;
+    border-radius: 8px;
+}
+
+form input[type="text"] {
+    margin: 6px;
+    width: 600px;
+    font-size: 2rem;
+    background-color: inherit;
+    border: none;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+}
+
+form img {
+    width: 60px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table td, th {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table .tableText {
+    text-align: left;
+}
+
+table th {
+    text-align: center;
+    background-color: color-mix(in srgb, var(--amarillo-oscuro), wheat 5%);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--amarillo-normal-1);
+}
+
+tr:nth-child(even) {
+    background-color: var(--amarillo-normal-2);
+}
+
+tr:hover {
+    background-color: var(--amarillo-normal-3);
+}
+
+table tr td input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcoral;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+table tr td input[type="checkbox"]:checked {
+    background-color: lightgreen;
+}
+
+table tr td img {
+    width: 25px;
+}
+
+#botonesBusqueda {
+    display: flex;
+    align-items: stretch;
+    margin: 16px;
+}
+
+#botonesBusqueda form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0%;
+    background-color: inherit;
+    margin: 1px;
+}
+
+#botonesBusqueda form:not(:first-child) {
+    border-left: 1px dashed #ccc;
+}
+
+#botonesBusqueda #formRepetirBusqueda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#botonesBusqueda #numeroNuevaBusqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botonesBusqueda #numeroNuevaBusqueda label {
+    margin-left: 6px;
+    width: 90px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+#botonesBusqueda #formRepetirBusqueda input[type="number"] {
+    margin: 4px;
+    padding: 4px;
+    width: 50px;
+    text-align: center;
+    background-color: var(--amarillo-normal-1);
+    border: 1px solid #ccc;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: inner-spin-button;
+    display: none;
+}
+
+#botonesBusqueda input[type="submit"] {
+    margin: 3px;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+#botonesBusqueda input[type="submit"]:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#botonesBusqueda #volverInicio {
+    background-color: lightgreen;
+}
+
+#botonesBusqueda #volverInicio:hover {
+    background-color: color-mix(in srgb, lightgreen, grey 12%);
+}
+
+#botonesBusqueda #exportarCSV {
+    background-color: lightblue;
+}
+
+#botonesBusqueda #exportarCSV:hover {
+    background-color: color-mix(in srgb, lightblue, grey 12%);
+}
+
+#botonesBusqueda #repetirBusqueda {
+    background-color: lightcoral;
+}
+
+#botonesBusqueda #repetirBusqueda:hover {
+    background-color: color-mix(in srgb, lightcoral, grey 12%);
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    color: gray;
+    background-color: black;
+    text-align: center;
+}
